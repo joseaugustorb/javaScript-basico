@@ -5,7 +5,7 @@ function Car(maximumSpeed = 200, acceleration = 5) {
     let currentSpeed = 0
 
     // Método público
-    this.speedUp = function () {
+    this.speedUp = () => {
         if(currentSpeed + acceleration <= maximumSpeed) {
             currentSpeed += acceleration
         } else {
@@ -14,9 +14,7 @@ function Car(maximumSpeed = 200, acceleration = 5) {
     }
 
     // Método público
-    this.getCurrentSpeed = function () {
-        return currentSpeed
-    }
+    this.getCurrentSpeed = () => currentSpeed
 }
 
 const golf = new Car
